@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class UserRepository {
     private final Map<String, User> users = new HashMap<>() {{
         put("user1", new User("user1", List.of(Authorities.READ)));
