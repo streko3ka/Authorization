@@ -1,9 +1,9 @@
 FROM openjdk:17-jdk-alpine
 
-EXPOSE 8080
+EXPOSE 8081
 
 LABEL authors="darya"
 
-COPY build/libs/Authorization-0.0.1-SNAPSHOT.jar myapp.jar
+ADD build/libs/Authorization-0.0.1.jar myapp.jar
 
-CMD ["java", "-jar", "myapp.jar"]
+ENTRYPOINT ["java", "-jar", "myapp.jar"]
